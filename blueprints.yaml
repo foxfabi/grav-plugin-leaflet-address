@@ -1,0 +1,124 @@
+name: Leaflet Address
+version: 0.1.2
+description: With the Leaflet address plugin you can easily show an address on a map
+icon: map
+author:
+  name: Fabian Dennler
+  email: fd@fabforge.ch
+homepage: https://github.com/foxfabi/grav-plugin-leaflet-address
+demo: 
+keywords: grav, plugin, leaflet, map, address
+bugs: https://github.com/foxfabi/grav-plugin-leaflet-address/issues
+docs: https://github.com/foxfabi/grav-plugin-leaflet-address/blob/develop/README.md
+license: MIT
+
+form:
+  validation: strict
+  fields:
+    basics:
+      type: section
+      title: PLUGIN_LEAFLET_ADDRESS.ADMIN.GLOBAL_CONFIG
+      underline: true
+
+    enabled:
+      type: toggle
+      label: PLUGIN_LEAFLET_ADDRESS.ADMIN.PLUGIN_STATUS
+      highlight: 1
+      default: 0
+      options:
+        1: PLUGIN_LEAFLET_ADDRESS.ADMIN.ENABLED
+        0: PLUGIN_LEAFLET_ADDRESS.ADMIN.DISABLED
+      validate:
+        type: bool
+
+    cdn:
+      type: toggle
+      label: CDN
+      help: PLUGIN_LEAFLET_ADDRESS.ADMIN.CDN_HELP
+      highlight: 1
+      default: 1
+      options:
+        1: PLUGIN_LEAFLET_ADDRESS.ADMIN.ENABLED
+        0: PLUGIN_LEAFLET_ADDRESS.ADMIN.DISABLED
+      validate:
+        type: bool
+
+    provider:
+      type: select
+      label: Leaflet Map Provider
+      help: "Choose a leaflet map provider."
+      default: OpenStreetMap.Mapnik
+      data-options@: '\Grav\Plugin\LeafletAddressPlugin::leafletProviders'
+
+    leaflet.zoom:
+      type: number
+      label: Zoom level
+      default: 13
+      validate:
+        min: 1
+        max: 19
+
+    leaflet.icon:
+      type: select
+      label: Marker icon
+      help: "Choose a marker color."
+      default: 'Blue'
+      data-options@: '\Grav\Plugin\LeafletAddressPlugin::markerIcons'
+
+    informations:
+        type: section
+        title: Address
+        underline: true
+        fields:
+            columns:
+              type: columns
+              fields:
+                  column1:
+                      type: column
+                      fields:
+                          address.name:
+                              type: text
+                              label: Name
+                          address.address:
+                              type: text
+                              label: Street address
+                              id: coordinateselector-address
+                          address.zip:
+                              type: text
+                              label: Postal code
+                              id: coordinateselector-zip
+                          address.city:
+                              type: text
+                              label: Locality (i.e. City)
+                              id: coordinateselector-city
+                          address.country:
+                              type: select
+                              label: Country
+                              data-options@: '\Grav\Plugin\LeafletAddressPlugin::countryCodes'
+                              id: coordinateselector-country
+                  column2:
+                      type: column
+                      fields:
+                          address.phone:
+                              type: text
+                              label: Phone number
+                          address.email:
+                              type: email
+                              label: Email address
+                              validate:
+                                  type: email
+                          address.subaddress:
+                              type: text
+                              label: Additional Address
+                          address.state:
+                              type: text
+                              label: State or Province
+    map:
+        type: section
+        title: Coordinates
+        underline: true
+        fields:
+            leaflet.coordinates:
+              type: coordinateselector
+              label: false
+              display_label: false

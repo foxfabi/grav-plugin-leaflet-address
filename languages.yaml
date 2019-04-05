@@ -1,0 +1,27 @@
+en:
+  PLUGIN_LEAFLET_ADDRESS:
+    TEMPLATES:
+        SEARCH_LABEL: Search
+        COORDINATES_LABEL: Coordinates
+        LATITUDE_LABEL: Latitude
+        LONGITUDE_LABEL: Longitude
+    ADMIN:
+        GLOBAL_CONFIG: Plugin configuration
+        PLUGIN_STATUS: Plugin status
+        ENABLED: Enabled
+        DISABLED: Disabled
+        CDN_HELP: Include JavaScript and CSS files from official CDN or local.
+
+de:
+  PLUGIN_LEAFLET_ADDRESS:
+    TEMPLATES:
+        SEARCH_LABEL: Suche
+        COORDINATES_LABEL: Koordinaten
+        LATITUDE_LABEL: Längengrad
+        LONGITUDE_LABEL: Breitengrad
+    ADMIN:
+        GLOBAL_CONFIG: Plugin Einstellungen
+        PLUGIN_STATUS: Plugin Status
+        ENABLED: Aktiviert
+        DISABLED: Deaktiviert
+        CDN_HELP: Binden Sie JavaScript- und CSS-Dateien aus dem offiziellen CDN oder lokal ein.

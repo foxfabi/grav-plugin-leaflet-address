@@ -1,0 +1,63 @@
+.coordinateselector-map {
+  width: 100%;
+}
+
+.search-coordinate-selector {
+  position: relative;
+}
+
+.search-location-datalist {
+  display: block;
+  position: absolute;
+  z-index: 9999;
+  background: white;
+  left: 0;
+  right: 0;
+}
+
+.search-location-datalist option {
+  padding: .375rem .375rem;
+  cursor: pointer;
+  background-color: #fdfdfd; 
+  border-bottom: 1px solid #d4d4d4; 
+}
+
+.search-location-datalist option:hover {
+  background-color: #e9e9e9; 
+}
+
+.fake-input {
+  border: 1px solid #e6e6e6;
+  background: #fcfcfc;
+  color: #646e7c;
+  transition: border-color;
+  border-radius: .1875rem;
+  padding: .375rem .375rem;
+}
+
+@keyframes spinner {
+  to {transform: rotate(360deg);}
+}
+
+.spinner {
+  position: relative;
+  display: inline-block;
+  margin-left: .675rem;
+}
+ 
+.spinner:before {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  margin-left: -10px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  border-top-color: #333;
+  animation: spinner .6s linear infinite;
+}
+
