@@ -1,7 +1,16 @@
-<div class="map-wrapper">
-  <div id="leaflet-address-map"></div>
-</div>
- 
-<script>
-{% include "partials/leaflet-address.js.twig" with {'config': config} %}
-</script>
+<table>
+  <tbody>
+    <tr>
+      <td>{{ config.address.name }}</td>
+      <td>☎ {{ config.address.phone }}</td>
+    </tr>
+    <tr>
+      <td>{{ config.address.address }}</td>
+      <td>✉ <a href="mailto:{{ config.address.email }}" class="mailto">{{ config.address.email }}</a></td>
+    </tr>
+    <tr>
+      <td>{{ config.address.country }} - {{ config.address.zip }} {{ config.address.city }}</td>
+      <td>{{ config.address.subaddress }}</td>
+    </tr>
+  </tbody>
+</table>
