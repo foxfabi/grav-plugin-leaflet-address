@@ -126,12 +126,6 @@ class LeafletAddressPlugin extends Plugin
     public function onTwigSiteVariables()
     {
 
-        // Initialize Admin Language if needed
-        $language = $this->grav['language'];
-        if ($language->enabled() && empty($this->grav['session']->admin_lang)) {
-            $this->grav['session']->admin_lang = $language->getLanguage();
-        }
-
         $translations = array();
         $strings = [
             'SEARCH_LABEL',
