@@ -46,9 +46,10 @@ Options are pretty self explanatory.
 Note that if you use the admin plugin, a file with your configuration, and named leaflet-address.yaml will be saved in the `user/config/plugins/` folder once the configuration is saved in the admin.
 
 ## Usage
-The plugin provides a Twig template that you need to include in your theme where you want to add the leaflet map. Something like:
+The plugin provides two Twig template that you need to include in your theme or page where you want to add the leaflet map and address. Something like:
 ```
 {% include "partials/leaflet-address.html.twig" with {'config': config.plugins['leaflet-address']} %}
+{% include "partials/leaflet-address-map.html.twig" with {'config': config.plugins['leaflet-address']} %}
 ```
 
 ## Credits
