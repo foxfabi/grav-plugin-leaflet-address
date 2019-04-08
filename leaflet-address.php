@@ -13,6 +13,7 @@ use Grav\Common\Language\LanguageCodes;
  */
 class LeafletAddressPlugin extends Plugin
 {
+    const SLUG = 'leaflet-address';
     protected $config;
 
     /**
@@ -38,7 +39,7 @@ class LeafletAddressPlugin extends Plugin
     public function onPluginsInitialized()
     {
 
-        $config = $this->grav['config']->get('plugins.leaflet-address');
+        $config = $this->grav['config']->get('plugins.' . self::SLUG);
         //$language = $this->$grav['language']->
         if (!$this->isAdmin()) {
           // Enable the main event we are interested in
@@ -84,8 +85,8 @@ class LeafletAddressPlugin extends Plugin
             return;
         }
         $twig   = $this->grav['twig'];
-        $this->base = '/user/plugins/leaflet-address';
-        $this->config->set('plugins.leaflet-address.path', $this->grav['uri']->rootUrl(false) . $this->base);
+        $this->base = '/user/plugins/' . self::SLUG ;
+        $this->config->set('plugins.' . self::SLUG . '.path', $this->grav['uri']->rootUrl(false) . $this->base);
         $config = $this->config->toArray();
     }
 
@@ -96,30 +97,31 @@ class LeafletAddressPlugin extends Plugin
         $frontendCollection = array();
         $backendCollection = array();
 
-        if ($this->config->get('plugins.leaflet-address.cdn')) {
+        if ($this->config->get('plugins.' . self::SLUG . '.cdn')) {
             array_push($commonCollection,"//unpkg.com/leaflet@1.4.0/dist/leaflet.css");
             array_push($commonCollection,"//unpkg.com/leaflet@1.4.0/dist/leaflet.js");
         } else {
-            array_push($commonCollection,"plugin://leaflet-address/assets/css/leaflet.css");
-            array_push($commonCollection,"plugin://leaflet-address/assets/js/leaflet.js");
+            array_push($commonCollection,"plugin://" . self::SLUG . "/assets/css/leaflet.css");
+            array_push($commonCollection,"plugin://" . self::SLUG . "/assets/js/leaflet.js");
         }
 
-        array_push($frontendCollection,"plugin://leaflet-address/assets/js/leaflet-address.frontend.js");
-        array_push($frontendCollection,"plugin://leaflet-address/assets/css/leaflet-address.frontend.css");
-        array_push($backendCollection,"plugin://leaflet-address/assets/css/leaflet-address.backend.css");
-        array_push($backendCollection,"plugin://leaflet-address/assets/js/leaflet-address.frontend.js");
-        array_push($backendCollection,"plugin://leaflet-address/assets/js/leaflet-address.backend.js");
+        array_push($frontendCollection,"plugin://" . self::SLUG . "/assets/css/leaflet-address.frontend.css");
+        array_push($frontendCollection,"plugin://" . self::SLUG . "/assets/js/leaflet-address.frontend.js");
+
+        array_push($backendCollection,"plugin://" . self::SLUG . "/assets/css/leaflet-address.backend.css");
+        array_push($backendCollection,"plugin://" . self::SLUG . "/assets/js/leaflet-address.frontend.js");
+        array_push($backendCollection,"plugin://" . self::SLUG . "/assets/js/leaflet-address.backend.js");
 
         $frontendCollection = array_merge($commonCollection, $frontendCollection);
         $backendCollection = array_merge($commonCollection, $backendCollection);
 
-        $assets->registerCollection('leaflet-address-frontend', $frontendCollection);
-        $assets->registerCollection('leaflet-address-backend', $backendCollection);
+        $assets->registerCollection(self::SLUG . '-frontend', $frontendCollection);
+        $assets->registerCollection(self::SLUG . '-backend', $backendCollection);
 
         if (!$this->isAdmin()) {
-          $assets->add('leaflet-address-frontend', 100);
+          $assets->add(self::SLUG . '-frontend', 99);
         } else {
-          $assets->add('leaflet-address-backend', 100);
+          $assets->add(self::SLUG . '-backend', 99);
         }
     }
 
