@@ -75,8 +75,8 @@ The plugin also provide a shortcode (**p**lugin **l**eaflet **a**ddress short**c
 `[place]`
 
 Options:
-  *   [place **type="addr"**]: display leaflet address (Using `leaflet-address.html.twig`)
-  *   [place **type="map"**]:  display leaflet address map (Using `leaflet-address-map.html.twig`)
+  * `[place type="addr"]` - display leaflet address (Using `leaflet-address.html.twig`)
+  * `[place type="map"]` - display leaflet address map (Using `leaflet-address-map.html.twig`)
 
 ## Credits
 
