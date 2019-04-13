@@ -9,7 +9,6 @@ add the ability to easily embed a leaflet map to display an address with a marke
  * Unzip it under `/your/site/grav/user/plugins`.
  * Rename the folder to `leaflet-address`.
 
-
 You should now have all the plugin files under
 
     /your/site/grav/user/plugins/leaflet-address
@@ -55,7 +54,7 @@ When entering address, postcode and city, the coordinates search field will be c
 The search for coordinates uses the [photon.komoot.de](https://photon.komoot.de/) API and returns the first six matching entries.
 When selecting a result, the associated coordinates (longitude, latitude) are entered in the corresponding fields.
 
-You can also click on the map to change the marker location and get the latitude longitude of the places located close to the selected address. 
+You can also click on the map to change the marker location and get the `latitude,longitude` of the places located close to the selected address. 
 
 ## Usage
 The plugin provides two Twig template that you can include in your theme or page where you want to add the leaflet map and address. Something like:
