@@ -3,6 +3,13 @@
 **Leaflet Address** is a [Grav CMS](http://github.com/getgrav/grav) Plugin thats
 add the ability to easily embed a leaflet map to display an address with a marker.
 
+At the moment the following map provider are available:
+
+* OpenStreetMap Mapnik
+* Esri WorldStreetMap
+* CartoDB Voyager
+
+
 ## Installation
 
  * Download the zip version of this repository from [GitHub](https://github.com/foxfabi/grav-plugin-leaflet-address).
