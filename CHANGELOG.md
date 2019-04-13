@@ -3,6 +3,10 @@
 
 1. [](#new)
    * Separated the map from address twig template
+   * Added a shortcode `[place]` with argument `type=map` or `type=addr` ([#2433: Suggestion from Andy Miller @rhukster](https://github.com/getgrav/grav/issues/2433#issuecomment-481479209))
+1. [](#improved)
+   * Added description to configure plugin using the Administration Panel
+   * Replaced empty default configuration with a sample configuration
 1. [](#bugfix)
    * Removed debugging lines
 
