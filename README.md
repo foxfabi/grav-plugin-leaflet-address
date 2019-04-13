@@ -43,14 +43,22 @@ provider: OpenStreetMap.Mapnik
 
 Options are pretty self explanatory.
 
-Note that if you use the admin plugin, a file with your configuration, and named leaflet-address.yaml will be saved in the `user/config/plugins/` folder once the configuration is saved in the admin.
+Note that if you use the admin plugin, a file with your configuration, and named `leaflet-address.yaml` will be saved in the `user/config/plugins/` folder once the configuration is saved in the admin.
 
 ## Usage
-The plugin provides two Twig template that you need to include in your theme or page where you want to add the leaflet map and address. Something like:
+The plugin provides two Twig template that you can include in your theme or page where you want to add the leaflet map and address. Something like:
 ```
 {% include "partials/leaflet-address.html.twig" with {'config': config.plugins['leaflet-address']} %}
 {% include "partials/leaflet-address-map.html.twig" with {'config': config.plugins['leaflet-address']} %}
 ```
+
+The plugin also provide a shortcode:
+
+`[place]`
+
+Options:
+  *   [place **type="addr"**]: display leaflet address (Using `leaflet-address.html.twig`)
+  *   [place **type="map"**]:  display leaflet address map (Using `leaflet-address-map.html.twig`)
 
 ## Credits
 

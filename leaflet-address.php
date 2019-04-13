@@ -13,8 +13,9 @@ use Grav\Common\Language\LanguageCodes;
  */
 class LeafletAddressPlugin extends Plugin
 {
-    const SLUG = 'leaflet-address';
+    const NAME = 'leaflet-address';
     protected $config;
+
 
     /**
      * @return array
@@ -39,22 +40,26 @@ class LeafletAddressPlugin extends Plugin
     public function onPluginsInitialized()
     {
 
-        $config = $this->grav['config']->get('plugins.' . self::SLUG);
-        //$language = $this->$grav['language']->
-        if (!$this->isAdmin()) {
-          // Enable the main event we are interested in
-          $this->enable([
-              'onTwigTemplatePaths' => ['onTwigTemplatePaths', 0],
-              'onPageInitialized'   => ['onPageInitialized', 0],
-              'onAssetsInitialized' => ['onAssetsInitialized', 0],
-              'onTwigSiteVariables' => ['onTwigSiteVariables', 0]
-          ]);
-        } else {
-          $this->enable([
-              'onAdminTwigTemplatePaths' => ['onAdminTwigTemplatePaths', 0],
-              'onAssetsInitialized' => ['onAssetsInitialized', 0],
-              'onTwigSiteVariables' => ['onTwigSiteVariables', 0]
-          ]);
+        //$this->config = $this->grav['config']->get('plugins.' . self::NAME);
+        if ($this->config->get('plugins.' . self::NAME . '.enabled')) {
+          //$language = $this->$grav['language']->
+          if (!$this->isAdmin()) {
+            // Enable the main event we are interested in
+            $this->enable([
+                'onTwigTemplatePaths' => ['onTwigTemplatePaths', 0],
+                'onPageInitialized'   => ['onPageInitialized', 0],
+                'onAssetsInitialized' => ['onAssetsInitialized', 0],
+                'onTwigSiteVariables' => ['onTwigSiteVariables', 0],
+                'onShortcodeHandlers' => ['onShortcodeHandlers', 0],
+            ]);
+          } else {
+            $this->enable([
+                'onAdminTwigTemplatePaths' => ['onAdminTwigTemplatePaths', 0],
+                'onAssetsInitialized' => ['onAssetsInitialized', 0],
+                'onTwigSiteVariables' => ['onTwigSiteVariables', 0],
+                'onShortcodeHandlers' => ['onShortcodeHandlers', 0],
+            ]);
+          }
         }
 
     }
@@ -84,10 +89,8 @@ class LeafletAddressPlugin extends Plugin
         if (!$page) {
             return;
         }
-        $twig   = $this->grav['twig'];
-        $this->base = '/user/plugins/' . self::SLUG ;
-        $this->config->set('plugins.' . self::SLUG . '.path', $this->grav['uri']->rootUrl(false) . $this->base);
-        $config = $this->config->toArray();
+        $this->base = '/user/plugins/' . self::NAME;
+        $this->config->set('plugins.' . self::NAME . '.path', $this->grav['uri']->rootUrl(false) . $this->base);
     }
 
     public function onAssetsInitialized(Event $e)
@@ -97,34 +100,34 @@ class LeafletAddressPlugin extends Plugin
         $frontendCollection = array();
         $backendCollection = array();
 
-        if ($this->config->get('plugins.' . self::SLUG . '.cdn')) {
+        if ($this->config->get('plugins.' . self::NAME . '.cdn')) {
             array_push($commonCollection,"//unpkg.com/leaflet@1.4.0/dist/leaflet.css");
             array_push($commonCollection,"//unpkg.com/leaflet@1.4.0/dist/leaflet.js");
         } else {
-            array_push($commonCollection,"plugin://" . self::SLUG . "/assets/css/leaflet.css");
-            array_push($commonCollection,"plugin://" . self::SLUG . "/assets/js/leaflet.js");
+            array_push($commonCollection,"plugin://" . self::NAME . "/assets/css/leaflet.css");
+            array_push($commonCollection,"plugin://" . self::NAME . "/assets/js/leaflet.js");
         }
-
-        array_push($frontendCollection,"plugin://" . self::SLUG . "/assets/css/leaflet-address.frontend.css");
-        array_push($frontendCollection,"plugin://" . self::SLUG . "/assets/js/leaflet-address.frontend.js");
-
-        array_push($backendCollection,"plugin://" . self::SLUG . "/assets/css/leaflet-address.backend.css");
-        array_push($backendCollection,"plugin://" . self::SLUG . "/assets/js/leaflet-address.frontend.js");
-        array_push($backendCollection,"plugin://" . self::SLUG . "/assets/js/leaflet-address.backend.js");
+        array_push($commonCollection,"plugin://" . self::NAME . "/assets/js/leaflet-address.frontend.js");
+        array_push($frontendCollection,"plugin://" . self::NAME . "/assets/css/leaflet-address.frontend.css");
+        array_push($backendCollection,"plugin://" . self::NAME . "/assets/css/leaflet-address.backend.css");
+        array_push($backendCollection,"plugin://" . self::NAME . "/assets/js/leaflet-address.backend.js");
 
         $frontendCollection = array_merge($commonCollection, $frontendCollection);
         $backendCollection = array_merge($commonCollection, $backendCollection);
 
-        $assets->registerCollection(self::SLUG . '-frontend', $frontendCollection);
-        $assets->registerCollection(self::SLUG . '-backend', $backendCollection);
+        $assets->registerCollection(self::NAME . '-frontend', $frontendCollection);
+        $assets->registerCollection(self::NAME . '-backend', $backendCollection);
 
         if (!$this->isAdmin()) {
-          $assets->add(self::SLUG . '-frontend', 99);
+          $assets->add(self::NAME . '-frontend', 99);
         } else {
-          $assets->add(self::SLUG . '-backend', 99);
+          $assets->add(self::NAME . '-backend', 99);
         }
     }
 
+    /*
+     * TODO
+     */
     public function onTwigSiteVariables()
     {
 
@@ -141,6 +144,16 @@ class LeafletAddressPlugin extends Plugin
         }
 
         $this->grav['twig']->twig_vars['translations'] = $translations;
+    }
+
+    /**
+     * Register all shortcodes from folder
+     *
+     * @param Event $e
+     */
+    public function onShortcodeHandlers(Event $e)
+    {
+        $this->grav['shortcode']->registerAllShortcodes(__DIR__ . '/shortcodes');
     }
 
     /**
