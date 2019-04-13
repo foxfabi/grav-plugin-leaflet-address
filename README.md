@@ -63,7 +63,7 @@ The plugin provides two Twig template that you can include in your theme or page
 {% include "partials/leaflet-address-map.html.twig" with {'config': config.plugins['leaflet-address']} %}
 ```
 
-The plugin also provide a shortcode:
+The plugin also provide a shortcode (**p**lugin **l**eaflet **a**ddress short**c**ode **e**mbed):
 
 `[place]`
 
