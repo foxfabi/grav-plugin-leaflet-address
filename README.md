@@ -20,30 +20,42 @@ You should now have all the plugin files under
 
 Before configuring this plugin, you should copy the `user/plugins/leaflet-address/leaflet-address.yaml` to `user/config/plugins/leaflet-address.yaml` and only edit that copy.
 
-Here is the default configuration:
+Here is a sample configuration:
 
 ```yaml
 enabled: true
 address:
-  country:
-  name:
-  address:
-  zip:
-  city:
-  phone:
-  email:
-  state:
+  country: IT
+  name: name
+  address: 'Street address'
+  zip: 'Postal code'
+  city: Locality
+  phone: 'Phone number'
+  email: email@address.local
+  state: 'State or Province'
+  subaddress: 'Additional Address'
 leaflet:
   zoom: 13
   icon: Yellow
-  coordinates: 
+  coordinates: '41.0819847,14.252262'
 cdn: true
 provider: OpenStreetMap.Mapnik
 ```
 
-Options are pretty self explanatory.
+Options are pretty self explanatory. 
 
-Note that if you use the admin plugin, a file with your configuration, and named `leaflet-address.yaml` will be saved in the `user/config/plugins/` folder once the configuration is saved in the admin.
+* `coordinates`: '39.9318, -105.2813'
+
+### Using the Administration Panel plugin
+If you use the admin plugin, a file named `leaflet-address.yaml` 
+with your configuration will be saved in the `user/config/plugins/` folder 
+once the configuration is saved.
+
+When entering address, postcode and city, the coordinates search field will be completed accordingly. 
+The search for coordinates uses the [photon.komoot.de](https://photon.komoot.de/) API and returns the first six matching entries.
+When selecting a result, the associated coordinates (longitude, latitude) are entered in the corresponding fields.
+
+You can also click on the map to change the marker location and get the latitude longitude of the places located close to the selected address. 
 
 ## Usage
 The plugin provides two Twig template that you can include in your theme or page where you want to add the leaflet map and address. Something like:
