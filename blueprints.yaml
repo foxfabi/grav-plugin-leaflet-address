@@ -1,6 +1,6 @@
 name: Leaflet Address
-version: 0.1.2
-description: With the Leaflet address plugin you can easily show an address on a map
+version: 0.1.3
+description: With the Leaflet address plugin you can easily show an address as text and on a leaflet map.
 icon: map
 author:
   name: Fabian Dennler
@@ -94,6 +94,7 @@ form:
                           address.country:
                               type: select
                               label: Country
+                              default: 'CH'
                               data-options@: '\Grav\Plugin\LeafletAddressPlugin::countryCodes'
                               id: coordinateselector-country
                   column2:
