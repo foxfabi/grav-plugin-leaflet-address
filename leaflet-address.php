@@ -40,7 +40,7 @@ class LeafletAddressPlugin extends Plugin
     public function onPluginsInitialized()
     {
 
-        //$this->config = $this->grav['config']->get('plugins.' . self::NAME);
+        //$config = $this->grav['config']->get('plugins.' . self::NAME);
         if ($this->config->get('plugins.' . self::NAME . '.enabled')) {
           //$language = $this->$grav['language']->
           if (!$this->isAdmin()) {
@@ -55,6 +55,7 @@ class LeafletAddressPlugin extends Plugin
           } else {
             $this->enable([
                 'onAdminTwigTemplatePaths' => ['onAdminTwigTemplatePaths', 0],
+                'onPageInitialized'   => ['onPageInitialized', 0],
                 'onAssetsInitialized' => ['onAssetsInitialized', 0],
                 'onTwigSiteVariables' => ['onTwigSiteVariables', 0],
                 'onShortcodeHandlers' => ['onShortcodeHandlers', 0],
