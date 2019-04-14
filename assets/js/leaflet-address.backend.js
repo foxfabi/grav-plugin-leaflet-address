@@ -65,7 +65,7 @@ fetchCoordinate = function (event) {
 }
 
 bindPrepareSearch = function() {
-  var fields = ["address", "zip", "city"];
+  var fields = ["address", "zip", "city", "country"];
   $.each( fields, function( index, value ) {
     $('#coordinateselector-' + value).change(function () {
       prepareSearch();
