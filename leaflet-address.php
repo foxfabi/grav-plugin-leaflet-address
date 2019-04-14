@@ -40,7 +40,6 @@ class LeafletAddressPlugin extends Plugin
     public function onPluginsInitialized()
     {
 
-        //$config = $this->grav['config']->get('plugins.' . self::NAME);
         if ($this->config->get('plugins.' . self::NAME . '.enabled')) {
           //$language = $this->$grav['language']->
           if (!$this->isAdmin()) {
@@ -82,7 +81,7 @@ class LeafletAddressPlugin extends Plugin
     }
 
     /**
-     * Initialize leaflet-address when detected in a page.
+     * Initialize leaflet-address when in a page.
      */
     public function onPageInitialized()
     {
@@ -94,6 +93,9 @@ class LeafletAddressPlugin extends Plugin
         $this->config->set('plugins.' . self::NAME . '.path', $this->grav['uri']->rootUrl(false) . $this->base);
     }
 
+    /**
+     * Register the assets into collection and add it as needed.
+     */
     public function onAssetsInitialized(Event $e)
     {
         $assets = $this->grav['assets'];
