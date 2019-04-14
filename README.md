@@ -48,9 +48,7 @@ cdn: true
 provider: OpenStreetMap.Mapnik
 ```
 
-Options are pretty self explanatory. 
-
-* `coordinates`: '39.9318, -105.2813'
+Options are pretty self explanatory.
 
 ### Using the Administration Panel plugin
 If you use the admin plugin, a file named `leaflet-address.yaml` 
