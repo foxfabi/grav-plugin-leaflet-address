@@ -1,5 +1,8 @@
+# v1.0.0-rc1
+[Unreleased]
+
 # v0.1.3
-## [Unreleased]
+## 04/14/2019
 
 1. [](#new)
    * Separated the map from address twig template
