@@ -1,7 +1,9 @@
-# v1.0.0-rc1
+# v1.0.1
 [Unreleased]
+1. [](#new)
+   * Added translations
 
-# v0.1.3
+# [v0.1.3]
 ## 04/14/2019
 
 1. [](#new)
@@ -28,3 +30,7 @@
 
 1. [](#new)
     * ChangeLog started...
+
+
+[Unreleased]: https://github.com/foxfabi/grav-plugin-leaflet-address/compare/v0.1.3...HEAD
+[v0.1.3]: https://github.com/foxfabi/grav-plugin-leaflet-address/compare/v0.1.2...v0.1.3

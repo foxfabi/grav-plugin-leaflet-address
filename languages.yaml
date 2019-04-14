@@ -1,27 +1,99 @@
 en:
   PLUGIN_LEAFLET_ADDRESS:
-    TEMPLATES:
-        SEARCH_LABEL: Search
-        COORDINATES_LABEL: Coordinates
-        LATITUDE_LABEL: Latitude
-        LONGITUDE_LABEL: Longitude
     ADMIN:
-        GLOBAL_CONFIG: Plugin configuration
-        PLUGIN_STATUS: Plugin status
         ENABLED: Enabled
         DISABLED: Disabled
-        CDN_HELP: Include JavaScript and CSS files from official CDN or local.
+    SECTION:
+        GLOBAL_CONFIG: Plugin configuration
+        ADDRESS: Address
+        COORDINATES: Coordinates
+    FIELDS:
+        PLUGIN_STATUS:
+            LABEL: Plugin status
+        CDN:
+            LABEL: CDN
+            HELP: Include JavaScript and CSS files from official CDN or local.
+        MAP_PROVIDER:
+            LABEL: Leaflet Map Provider
+            HELP: Choose a leaflet map provider.
+        ZOOM_LEVEL:
+            LABEL: Zoom level
+        MARKER_ICON:
+            LABEL: Marker icon
+            HELP: Choose a marker color.
+        NAME:
+            LABEL: Name
+        ADDRESS:
+            LABEL: Street address
+        ZIP:
+            LABEL: Postal code
+        LOCALITY:
+            LABEL: Locality (i.e. City)
+        COUNTRY:
+            LABEL: Country
+        PHONE:
+            LABEL: Phone number
+        EMAIL:
+            LABEL: Email address
+        ADDITIONAL:
+            LABEL: Additional informations
+        PROVINCE:
+            LABEL: State or Province
+        SEARCH:
+            LABEL: Search
+        COORDINATES:
+            LABEL: Coordinates
+        LATITUDE:
+            LABEL: Latitude
+        LONGITUDE:
+            LABEL: Longitude
 
 de:
   PLUGIN_LEAFLET_ADDRESS:
-    TEMPLATES:
-        SEARCH_LABEL: Suche
-        COORDINATES_LABEL: Koordinaten
-        LATITUDE_LABEL: Längengrad
-        LONGITUDE_LABEL: Breitengrad
     ADMIN:
-        GLOBAL_CONFIG: Plugin Einstellungen
-        PLUGIN_STATUS: Plugin Status
         ENABLED: Aktiviert
         DISABLED: Deaktiviert
-        CDN_HELP: Binden Sie JavaScript- und CSS-Dateien aus dem offiziellen CDN oder lokal ein.
+    SECTION:
+        GLOBAL_CONFIG: Plugin Einstellungen
+        ADDRESS: Adresse
+        COORDINATES: Koordinaten
+    FIELDS:
+        PLUGIN_STATUS:
+            LABEL: Plugin Status
+        CDN:
+            LABEL: CDN
+            HELP: Binden Sie JavaScript- und CSS-Dateien aus dem offiziellen CDN oder lokal ein.
+        MAP_PROVIDER:
+            LABEL: Leaflet Kartenanbieter
+            HELP: Wählen Sie einen Kartenanbieter.
+        ZOOM_LEVEL:
+            LABEL: Zoomstufe
+        MARKER_ICON:
+            LABEL: Marker Symbol
+            HELP: Wählen Sie eine Markierungsfarbe aus.
+        NAME:
+            LABEL: Name
+        ADDRESS:
+            LABEL: Strasse
+        ZIP:
+            LABEL: Postleitzahl
+        LOCALITY:
+            LABEL: Örtlichkeit (Bspw. Stadt)
+        COUNTRY:
+            LABEL: Land
+        PHONE:
+            LABEL: Telefon Nummer
+        EMAIL:
+            LABEL: E-mail Addresse
+        ADDITIONAL:
+            LABEL: Zusätzliche Informationen
+        PROVINCE:
+            LABEL: Staat oder Provinz
+        SEARCH:
+            LABEL: Suche
+        COORDINATES:
+            LABEL: Koordinaten
+        LATITUDE:
+            LABEL: Längengrad
+        LONGITUDE:
+            LABEL: Breitengrad

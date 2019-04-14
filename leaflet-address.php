@@ -67,7 +67,6 @@ class LeafletAddressPlugin extends Plugin
           $this->enable([
               'onPageInitialized'   => ['onPageInitialized', 0],
               'onAssetsInitialized' => ['onAssetsInitialized', 0],
-              'onTwigSiteVariables' => ['onTwigSiteVariables', 0],
               'onShortcodeHandlers' => ['onShortcodeHandlers', 0],
           ]);
         }
@@ -135,27 +134,6 @@ class LeafletAddressPlugin extends Plugin
         } else {
           $assets->add(self::NAME . '-backend', 99);
         }
-    }
-
-    /*
-     * TODO
-     */
-    public function onTwigSiteVariables()
-    {
-
-        $translations = array();
-        $strings = [
-            'SEARCH_LABEL',
-            'COORDINATES_LABEL',
-            'LATITUDE_LABEL',
-            'LONGITUDE_LABEL'
-        ];
-        $translations['LANG'] = $this->grav['language']->getLanguage();
-        foreach ($strings as $string) {
-          $translations[$string] = $this->grav['language']->translate('PLUGIN_LEAFLET_ADDRESS.TEMPLATES.' . $string);
-        }
-
-        $this->grav['twig']->twig_vars['translations'] = $translations;
     }
 
     /**

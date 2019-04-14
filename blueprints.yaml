@@ -1,5 +1,5 @@
 name: Leaflet Address
-version: 0.1.3
+version: 1.0.1
 description: With the Leaflet address plugin you can easily show an address as text and on a leaflet map.
 icon: map
 author:
@@ -20,12 +20,12 @@ form:
   fields:
     basics:
       type: section
-      title: PLUGIN_LEAFLET_ADDRESS.ADMIN.GLOBAL_CONFIG
+      title: PLUGIN_LEAFLET_ADDRESS.SECTION.GLOBAL_CONFIG
       underline: true
 
     enabled:
       type: toggle
-      label: PLUGIN_LEAFLET_ADDRESS.ADMIN.PLUGIN_STATUS
+      label: PLUGIN_LEAFLET_ADDRESS.FIELDS.PLUGIN_STATUS.LABEL
       highlight: 1
       default: 0
       options:
@@ -37,7 +37,7 @@ form:
     cdn:
       type: toggle
       label: CDN
-      help: PLUGIN_LEAFLET_ADDRESS.ADMIN.CDN_HELP
+      help: PLUGIN_LEAFLET_ADDRESS.FIELDS.CDN.HELP
       highlight: 1
       default: 1
       options:
@@ -48,14 +48,14 @@ form:
 
     provider:
       type: select
-      label: Leaflet Map Provider
-      help: "Choose a leaflet map provider."
+      label: PLUGIN_LEAFLET_ADDRESS.FIELDS.MAP_PROVIDER.LABEL
+      help: PLUGIN_LEAFLET_ADDRESS.FIELDS.MAP_PROVIDER.HELP
       default: OpenStreetMap.Mapnik
       data-options@: '\Grav\Plugin\LeafletAddressPlugin::leafletProviders'
 
     leaflet.zoom:
       type: number
-      label: Zoom level
+      label: PLUGIN_LEAFLET_ADDRESS.FIELDS.ZOOM_LEVEL.LABEL
       default: 13
       validate:
         min: 1
@@ -63,14 +63,14 @@ form:
 
     leaflet.icon:
       type: select
-      label: Marker icon
-      help: "Choose a marker color."
+      label: PLUGIN_LEAFLET_ADDRESS.FIELDS.MARKER_ICON.LABEL
+      help: PLUGIN_LEAFLET_ADDRESS.FIELDS.MARKER_ICON.HELP
       default: 'Blue'
       data-options@: '\Grav\Plugin\LeafletAddressPlugin::markerIcons'
 
     informations:
         type: section
-        title: Address
+        title: PLUGIN_LEAFLET_ADDRESS.SECTION.ADDRESS
         underline: true
         fields:
             columns:
@@ -81,22 +81,22 @@ form:
                       fields:
                           address.name:
                               type: text
-                              label: Name
+                              label: PLUGIN_LEAFLET_ADDRESS.FIELDS.NAME.LABEL
                           address.address:
                               type: text
-                              label: Street address
+                              label: PLUGIN_LEAFLET_ADDRESS.FIELDS.ADDRESS.LABEL
                               id: coordinateselector-address
                           address.zip:
                               type: text
-                              label: Postal code
+                              label: PLUGIN_LEAFLET_ADDRESS.FIELDS.ZIP.LABEL
                               id: coordinateselector-zip
                           address.city:
                               type: text
-                              label: Locality (i.e. City)
+                              label: PLUGIN_LEAFLET_ADDRESS.FIELDS.LOCALITY.LABEL
                               id: coordinateselector-city
                           address.country:
                               type: select
-                              label: Country
+                              label: PLUGIN_LEAFLET_ADDRESS.FIELDS.COUNTRY.LABEL
                               default: 'CH'
                               data-options@: '\Grav\Plugin\LeafletAddressPlugin::countryCodes'
                               id: coordinateselector-country
@@ -105,21 +105,21 @@ form:
                       fields:
                           address.phone:
                               type: text
-                              label: Phone number
+                              label: PLUGIN_LEAFLET_ADDRESS.FIELDS.PHONE.LABEL
                           address.email:
                               type: email
-                              label: Email address
+                              label: PLUGIN_LEAFLET_ADDRESS.FIELDS.EMAIL.LABEL
                               validate:
                                   type: email
                           address.subaddress:
                               type: text
-                              label: Additional Address
+                              label: PLUGIN_LEAFLET_ADDRESS.FIELDS.ADDITIONAL.LABEL
                           address.state:
                               type: text
-                              label: State or Province
+                              label: PLUGIN_LEAFLET_ADDRESS.FIELDS.PROVINCE.LABEL
     map:
         type: section
-        title: Coordinates
+        title: PLUGIN_LEAFLET_ADDRESS.SECTION.COORDINATES
         underline: true
         fields:
             leaflet.coordinates:

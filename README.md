@@ -9,7 +9,6 @@ At the moment the following map provider are available:
 * Esri WorldStreetMap
 * CartoDB Voyager
 
-
 ## Installation
 
  * Download the zip version of this repository from [GitHub](https://github.com/foxfabi/grav-plugin-leaflet-address).
@@ -55,11 +54,11 @@ If you use the admin plugin, a file named `leaflet-address.yaml`
 with your configuration will be saved in the `user/config/plugins/` folder 
 once the configuration is saved.
 
-When entering address, postcode and city, the coordinates search field will be completed accordingly. 
+When entering address, postcode, city and country, the coordinates search field will be completed accordingly. 
 The search for coordinates uses the [photon.komoot.de](https://photon.komoot.de/) API and returns the first six matching entries.
 When selecting a result, the associated coordinates (longitude, latitude) are entered in the corresponding fields.
 
-You can also click on the map to change the marker location and get the `latitude,longitude` of the places located close to the selected address. 
+You can also click on the map to change the marker position and get the `latitude,longitude` of the selected location. 
 
 ## Usage
 The plugin provides two Twig template that you can include in your theme or page where you want to add the leaflet map and address. Something like:
@@ -82,5 +81,5 @@ Options:
 
 ## To Do
 
-- [ ] Translations
+- [x] Translations
 
