@@ -8,6 +8,7 @@ address:
   phone:
   email:
   state:
+  subaddress:
 leaflet:
   zoom: 13
   icon: Yellow
