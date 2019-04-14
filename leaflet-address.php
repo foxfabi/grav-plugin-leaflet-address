@@ -16,6 +16,13 @@ class LeafletAddressPlugin extends Plugin
     const NAME = 'leaflet-address';
     protected $config;
 
+    /**
+     * @return bool
+     */
+    public static function checkRequirements(): bool
+    {
+        return version_compare(GRAV_VERSION, '1.5', '>');
+    }
 
     /**
      * @return array
@@ -29,6 +36,10 @@ class LeafletAddressPlugin extends Plugin
      */
     public static function getSubscribedEvents()
     {
+        if (!static::checkRequirements()) {
+            return [];
+        }
+
         return [
             'onPluginsInitialized' => ['onPluginsInitialized', 0]
         ];
@@ -42,26 +53,24 @@ class LeafletAddressPlugin extends Plugin
 
         if ($this->config->get('plugins.' . self::NAME . '.enabled')) {
           //$language = $this->$grav['language']->
+
+          // Enable the main event we are interested in
           if (!$this->isAdmin()) {
-            // Enable the main event we are interested in
             $this->enable([
                 'onTwigTemplatePaths' => ['onTwigTemplatePaths', 0],
-                'onPageInitialized'   => ['onPageInitialized', 0],
-                'onAssetsInitialized' => ['onAssetsInitialized', 0],
-                'onTwigSiteVariables' => ['onTwigSiteVariables', 0],
-                'onShortcodeHandlers' => ['onShortcodeHandlers', 0],
             ]);
           } else {
             $this->enable([
                 'onAdminTwigTemplatePaths' => ['onAdminTwigTemplatePaths', 0],
-                'onPageInitialized'   => ['onPageInitialized', 0],
-                'onAssetsInitialized' => ['onAssetsInitialized', 0],
-                'onTwigSiteVariables' => ['onTwigSiteVariables', 0],
-                'onShortcodeHandlers' => ['onShortcodeHandlers', 0],
             ]);
           }
+          $this->enable([
+              'onPageInitialized'   => ['onPageInitialized', 0],
+              'onAssetsInitialized' => ['onAssetsInitialized', 0],
+              'onTwigSiteVariables' => ['onTwigSiteVariables', 0],
+              'onShortcodeHandlers' => ['onShortcodeHandlers', 0],
+          ]);
         }
-
     }
 
     /**

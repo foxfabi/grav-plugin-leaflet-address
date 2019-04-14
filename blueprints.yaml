@@ -12,6 +12,9 @@ bugs: https://github.com/foxfabi/grav-plugin-leaflet-address/issues
 docs: https://github.com/foxfabi/grav-plugin-leaflet-address/blob/develop/README.md
 license: MIT
 
+dependencies:
+  - { name: grav, version: '>=1.5.0' }
+
 form:
   validation: strict
   fields:
