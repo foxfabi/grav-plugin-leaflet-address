@@ -8,6 +8,8 @@
    * Backend also use configured icon
    * Added description to configure plugin using the Administration Panel
    * Replaced empty default configuration with a sample configuration
+   * Added grav 1.5 dependency because I don't know the older one :)
+   * Simplified onPluginsInitialized event
 1. [](#bugfix)
    * Backend didn't know about config
    * Removed debugging lines
