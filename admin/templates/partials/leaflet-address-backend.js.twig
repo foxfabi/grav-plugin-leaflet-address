@@ -21,13 +21,13 @@ window.addEventListener("load", function() {
   maplayer.addTo(addressmap);
   // Add a marker with the stored coordinates
   if ($("#coordinateselector-value").val() !== undefined) {
-    marker = valueToMarker(addressmap);
+    marker = valueToMarker(addressmap, '{{ config.path }}', '{{ config.leaflet.icon }}');
   }
   $('#coordinateselector-value').change(function () {
     if (marker !== undefined) {
       addressmap.removeLayer(marker);
     }
-    marker = valueToMarker(addressmap);
+    marker = valueToMarker(addressmap, '{{ config.path }}', '{{ config.leaflet.icon }}');
   });
   bindPrepareSearch();
   addressmap.invalidateSize();

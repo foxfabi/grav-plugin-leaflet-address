@@ -37,7 +37,7 @@ getPhotonLocations = function (value) {
   });
 };
 
-valueToMarker = function (map) {
+valueToMarker = function (map, iconpath, icon) {
   var marker = undefined;
   try {
     var res = $("#coordinateselector-value").val().split(",");
@@ -45,7 +45,8 @@ valueToMarker = function (map) {
       $("#coordinateselector-lat").html(res[0]);
       $("#coordinateselector-lng").html(res[1]);
       var latlng = L.latLng(res[0], res[1]);
-      marker = new L.marker(latlng, { draggable: false });
+      var markerIcon = getMarkerIcon(iconpath, icon);
+      marker = L.marker(latlng, { draggable: false, icon: markerIcon });
       marker.addTo(map);
       centerMapOnMarker(map, marker);
       return marker;
