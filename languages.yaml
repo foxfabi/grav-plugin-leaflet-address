@@ -7,6 +7,12 @@ en:
         GLOBAL_CONFIG: Plugin configuration
         ADDRESS: Address
         COORDINATES: Coordinates
+        CONTRIB: >
+                  [OpenStreetMap](https://www.openstreetmap.org/) is a free editable map of the world. It is made by people like you.
+                  It would be great, if you decided to help improving the OpenStreetMap (OSM).
+                  [LearnOSM](https://learnosm.org/) provides easy to understand guides to get started with contributing.
+        FIXTHEMAP: |- 
+                  [Report an error to OSM](https://www.openstreetmap.org/fixthemap?classes=button&target=_blank)
     FIELDS:
         PLUGIN_STATUS:
             LABEL: Plugin status
@@ -57,6 +63,12 @@ de:
         GLOBAL_CONFIG: Plugin Einstellungen
         ADDRESS: Adresse
         COORDINATES: Koordinaten
+        CONTRIB: >
+                  [OpenStreetMap](https://www.openstreetmap.org/) ist eine frei editierbare Weltkarte. Sie wird von Leuten wie dir gemacht.
+                  Es wäre toll, wenn du dich entscheiden würdest, die OpenStreetMap (OSM) zu verbessern.
+                  [LearnOSM](https://learnosm.org/) bietet leicht verständliche Anleitungen, um mit dem Beitragen zu beginnen.
+        FIXTHEMAP: |- 
+                  [Einen Fehler an OSM melden](https://www.openstreetmap.org/fixthemap?classes=button&target=_blank)
     FIELDS:
         PLUGIN_STATUS:
             LABEL: Plugin Status
