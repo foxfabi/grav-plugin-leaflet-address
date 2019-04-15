@@ -154,10 +154,30 @@ class LeafletAddressPlugin extends Plugin
     public static function leafletProviders()
     {
         return array (
-          'OpenStreetMap.Mapnik' => 'OpenStreetMap Mapnik',
-          'Esri.WorldStreetMap'  => 'Esri WorldStreetMap',
-          'CartoDB.Voyager'      => 'CartoDB Voyager',
-        );        
+          'OpenStreetMap.Mapnik'      => 'OpenStreetMap Mapnik',
+          'OpenStreetMap.DE'          => 'OpenStreetMap Deutscher Stil (DE)',
+          'OpenStreetMap.HOT'         => 'OpenStreetMap Humanitarian (HOT)',
+          'OpenTopoMap'               => 'Topographical Map (OpenTopoMap)',
+          'Hydda.Full'                => 'Hydda Full',
+          'Hydda.Base'                => 'Hydda Base',
+          'Stamen.Toner'              => 'Stamen Toner',
+          'Stamen.TonerBackground'    => 'Stamen TonerBackground',
+          'Stamen.TonerLite'          => 'Stamen TonerLite',
+          'Stamen.Watercolor'         => 'Stamen Watercolor',
+          'Stamen.Terrain'            => 'Stamen Terrain',
+          'Stamen.TerrainBackground'  => 'Stamen TerrainBackground',
+          'Esri.WorldStreetMap'       => 'Esri WorldStreetMap',
+          'Esri.DeLorme'              => 'Esri DeLorme',
+          'Esri.WorldTopoMap'         => 'Esri WorldTopoMap',
+          'Esri.NatGeoWorldMap'       => 'Esri NatGeoWorldMap',
+          'MtbMap'                    => 'Mountainbike and Hiking Map (MtbMap)',
+          'CartoDB.Positron'          => 'CartoDB Positron',
+          'CartoDB.PositronNoLabels'  => 'CartoDB PositronNoLabels',
+          'CartoDB.DarkMatter'        => 'CartoDB DarkMatter',
+          'CartoDB.Voyager'           => 'CartoDB Voyager',
+          'HikeBike.HikeBike'         => 'HikeBike HikeBike',
+          'Wikimedia'                 => 'Wikimedia',
+        );
     }
 
     /**
@@ -176,7 +196,7 @@ class LeafletAddressPlugin extends Plugin
           'Violet' => 'Violet',
           'Grey'   => 'Grey',
           'Black'  => 'Black',
-        );        
+        );
     }
 
     /**

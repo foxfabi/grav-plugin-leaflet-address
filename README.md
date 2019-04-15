@@ -2,12 +2,6 @@
 
 **Leaflet Address** is a [Grav CMS](http://github.com/getgrav/grav) Plugin thats add the ability to easily embed a leaflet map to display an address with a marker.
 
-At the moment the following map provider are available:
-
-* OpenStreetMap Mapnik
-* Esri WorldStreetMap
-* CartoDB Voyager
-
 ## Installation
 
  * Download the zip version of this repository from [GitHub](https://github.com/foxfabi/grav-plugin-leaflet-address).
@@ -47,6 +41,22 @@ provider: OpenStreetMap.Mapnik
 ```
 
 Options are pretty self explanatory.
+### Map tiles providers
+At the moment the following map tiles are available:
+
+* [OpenStreetMap](https://maps.openstreetmap.org/)
+* [OpenTopoMap](https://opentopomap.org): a free, topographic map
+* [Hydda](http://maps.openstreetmap.se): OpenStreetMap Sverige
+* [Stamen Design](http://maps.stamen.com): maybe the best maps on the web
+* [Esri](https://www.arcgis.com/home/webmap/viewer.html?useExisting=1): they build ArcGIS, the world’s most powerful mapping & spatial analytics software
+* [MtbMap](http://maps.mtbmap.cz/): a free map for mountain biking (MTB) and hiking
+* [CartoDB](https://maps.carto.com/): for your Location Intelligence use cases
+* [HikeBike](https://hikebikemap.org/): another map for hiking and biking.
+* [Wikimedia maps](https://maps.wikimedia.org/)
+
+**Please note the general terms and conditions of the designated map tiles provider.**
+OpenStreetMap data is free for everyone to use. The [tile servers are not](https://operations.osmfoundation.org/policies/tiles/).
+Do you see something on the map that needs editing? Log into OpenStreetMap to [fix it](https://www.openstreetmap.org/fixthemap) and help make the map better for everyone! :)
 
 ### Using the Administration Panel plugin
 If you use the admin plugin, a file named `leaflet-address.yaml` with your configuration will be saved in the `user/config/plugins/` folder once the configuration is saved.
@@ -73,10 +83,13 @@ Options:
 ## Credits
 
 * Thanks to [Tribly Media](https://trilby.media/) for creating and supporting [Grav CMS](https://getgrav.org/).
-* [Marker icons](https://github.com/pointhi/leaflet-color-markers) are provided by [Thomas Pointhuber](https://github.com/pointhi).
-* [Leaflet](https://leafletjs.com/), originally created by [Vladimir Agafonkin](https://agafonkin.com/).
+* The [Marker icons](https://github.com/pointhi/leaflet-color-markers) are provided by [Thomas Pointhuber](https://github.com/pointhi).
+* Thanks to [Leaflet](https://leafletjs.com/) contributors, originally created by [Vladimir Agafonkin](https://agafonkin.com/).
+* Thanks to [Leaflet-providers](https://github.com/leaflet-extras/leaflet-providers) maintainers, originally created by Stefan Seelmann.
+* Open Data by [OpenStreetMap](https://www.openstreetmap.org) contributors
+* Thanks to the tile servers based on OSM data: [OpenStreetMap](https://maps.openstreetmap.org/), [OpenTopoMap](https://opentopomap.org),[Hydda](http://maps.openstreetmap.se), [Stamen Design](http://maps.stamen.com), [Esri](https://www.arcgis.com/home/webmap/viewer.html?useExisting=1), [MtbMap](http://maps.mtbmap.cz/), [CartoDB](https://maps.carto.com/), [HikeBike](https://hikebikemap.org/), [Wikimedia maps](https://maps.wikimedia.org/)
 
 ## To Do
-
+- Check if zoom does not exceed maxZoom of map provider
 - [x] Translations (EN, DE)
 
