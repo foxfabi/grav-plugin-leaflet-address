@@ -1,7 +1,6 @@
 # Leaflet Address Plugin
 
-**Leaflet Address** is a [Grav CMS](http://github.com/getgrav/grav) Plugin thats
-add the ability to easily embed a leaflet map to display an address with a marker.
+**Leaflet Address** is a [Grav CMS](http://github.com/getgrav/grav) Plugin thats add the ability to easily embed a leaflet map to display an address with a marker.
 
 At the moment the following map provider are available:
 
@@ -18,7 +17,7 @@ At the moment the following map provider are available:
 You should now have all the plugin files under
 
     /your/site/grav/user/plugins/leaflet-address
-	
+
 > NOTE: This plugin is a modular component for Grav which requires [Grav](http://github.com/getgrav/grav) and the [Error](https://github.com/getgrav/grav-plugin-error) and [Problems](https://github.com/getgrav/grav-plugin-problems) to operate.
 
 ## Configuration
@@ -50,15 +49,11 @@ provider: OpenStreetMap.Mapnik
 Options are pretty self explanatory.
 
 ### Using the Administration Panel plugin
-If you use the admin plugin, a file named `leaflet-address.yaml` 
-with your configuration will be saved in the `user/config/plugins/` folder 
-once the configuration is saved.
+If you use the admin plugin, a file named `leaflet-address.yaml` with your configuration will be saved in the `user/config/plugins/` folder once the configuration is saved.
 
-When entering address, postcode, city and country, the coordinates search field will be completed accordingly. 
-The search for coordinates uses the [photon.komoot.de](https://photon.komoot.de/) API and returns the first six matching entries.
-When selecting a result, the associated coordinates (longitude, latitude) are entered in the corresponding fields.
+When entering address, postcode, city and country, the coordinates search field will be completed accordingly. The search for coordinates uses the [photon.komoot.de](https://photon.komoot.de/) API and returns the first six matching entries. When selecting a result, the associated coordinates (longitude, latitude) are entered in the corresponding fields. You can also click on the map to change the marker position and get the `latitude,longitude` of the selected location.
 
-You can also click on the map to change the marker position and get the `latitude,longitude` of the selected location. 
+![](assets/screenshots/plugin-config-ui.png)
 
 ## Usage
 The plugin provides two Twig template that you can include in your theme or page where you want to add the leaflet map and address. Something like:
@@ -77,9 +72,11 @@ Options:
 
 ## Credits
 
-* [Marker icons](https://github.com/pointhi/leaflet-color-markers) are provided by [Thomas Pointhuber](https://github.com/pointhi)
+* Thanks to [Tribly Media](https://trilby.media/) for creating and supporting [Grav CMS](https://getgrav.org/).
+* [Marker icons](https://github.com/pointhi/leaflet-color-markers) are provided by [Thomas Pointhuber](https://github.com/pointhi).
+* [Leaflet](https://leafletjs.com/), originally created by [Vladimir Agafonkin](https://agafonkin.com/).
 
 ## To Do
 
-- [x] Translations
+- [x] Translations (EN, DE)
 
