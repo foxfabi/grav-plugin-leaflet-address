@@ -1,7 +1,18 @@
-# v1.0.1
+# v1.0.2
 [Unreleased]
+1. [](#bugfix)
+    * Use issues to request features or report bugs
+
+# [v1.0.1]
+## 04/15/2019
+
 1. [](#new)
-   * Added translations
+   * Added translations (EN, DE)
+   * Added many map providers
+   * Fullfill OSM requirement _fixthemap_
+1. [](#improved)
+   * Missing Leaflet-providers, OpenStreetMap and map providers in credits
+   * Default marker icon is red
 
 # [v0.1.3]
 ## 04/14/2019
@@ -32,5 +43,5 @@
     * ChangeLog started...
 
 
-[Unreleased]: https://github.com/foxfabi/grav-plugin-leaflet-address/compare/v0.1.3...HEAD
+[v1.0.1]: https://github.com/foxfabi/grav-plugin-leaflet-address/compare/v1.0.1...v0.1.3
 [v0.1.3]: https://github.com/foxfabi/grav-plugin-leaflet-address/compare/v0.1.2...v0.1.3
