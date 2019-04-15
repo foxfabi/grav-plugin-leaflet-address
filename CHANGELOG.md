@@ -1,7 +1,12 @@
-# v1.0.2
+# v1.0.3
 [Unreleased]
 1. [](#bugfix)
     * Use issues to request features or report bugs
+
+# [v1.0.2]
+## 04/15/2019
+1. [](#bugfix)
+    * Wrong comparison link in the changelog
 
 # [v1.0.1]
 ## 04/15/2019
@@ -43,5 +48,6 @@
     * ChangeLog started...
 
 
-[v1.0.1]: https://github.com/foxfabi/grav-plugin-leaflet-address/compare/v1.0.1...v0.1.3
+[v1.0.2]: https://github.com/foxfabi/grav-plugin-leaflet-address/compare/v1.0.1...v1.0.2
+[v1.0.1]: https://github.com/foxfabi/grav-plugin-leaflet-address/compare/v0.1.3...v1.0.1
 [v0.1.3]: https://github.com/foxfabi/grav-plugin-leaflet-address/compare/v0.1.2...v0.1.3
