@@ -4,6 +4,16 @@
 
 ## Installation
 
+Installing the Leaflet Address plugin can be done in one of two ways. The GPM (Grav Package Manager) installation method enables you to quickly and easily install the plugin with a simple terminal command, while the manual method enables you to do so via a zip file.
+
+### GPM Installation (Preferred)
+The simplest way to install this plugin is via the [Grav Package Manager (GPM)](http://learn.getgrav.org/advanced/grav-gpm) through your system's Terminal (also called the command line).  From the root of your Grav install type:
+
+    bin/gpm install leaflet-address
+
+This will install the Leaflet Address plugin into your `/user/plugins` directory within Grav. Its files can be found under `/your/site/grav/user/plugins/leaflet-address`.
+
+### Manual Installation
  * Download the zip version of this repository from [GitHub](https://github.com/foxfabi/grav-plugin-leaflet-address).
  * Unzip it under `/your/site/grav/user/plugins`.
  * Rename the folder to `leaflet-address`.
@@ -12,7 +22,7 @@ You should now have all the plugin files under
 
     /your/site/grav/user/plugins/leaflet-address
 
-> NOTE: This plugin is a modular component for Grav which requires [Grav](http://github.com/getgrav/grav) and the [Error](https://github.com/getgrav/grav-plugin-error) and [Problems](https://github.com/getgrav/grav-plugin-problems) to operate.
+> NOTE: This plugin is a modular component for Grav which requires [Grav CMS](http://github.com/getgrav/grav). If available the [Administration Panel](https://github.com/getgrav/grav-plugin-admin) with [Form](https://github.com/getgrav/grav-plugin-form) can be used for configuration.
 
 ## Configuration
 
