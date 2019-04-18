@@ -13,6 +13,7 @@ window.addEventListener("load", function() {
   var marker = undefined;
   $('#coordinateselector-searching').hide();
   bindSearchButton();
+  bindValidateProviderZoom();
   var mapheight = $('#coordinateselector-map').width();
   $('#coordinateselector-map').css('height', 9*mapheight/16);
   var addressmap = L.map('coordinateselector-map').setView([46.980252, 8.041992], {{config.leaflet.zoom}});

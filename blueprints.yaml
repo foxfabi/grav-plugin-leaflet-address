@@ -48,6 +48,8 @@ form:
 
     provider:
       type: select
+      id: map-provider
+      classes: provider-zoom
       label: PLUGIN_LEAFLET_ADDRESS.FIELDS.MAP_PROVIDER.LABEL
       help: PLUGIN_LEAFLET_ADDRESS.FIELDS.MAP_PROVIDER.HELP
       default: OpenStreetMap.Mapnik
@@ -55,6 +57,8 @@ form:
 
     leaflet.zoom:
       type: number
+      id: map-zoom
+      classes: provider-zoom
       label: PLUGIN_LEAFLET_ADDRESS.FIELDS.ZOOM_LEVEL.LABEL
       default: 13
       validate:

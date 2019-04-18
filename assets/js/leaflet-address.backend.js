@@ -106,3 +106,22 @@ bindSearchButton = function() {
     return false; 
   });
 }
+bindValidateProviderZoom = function () {
+  $('#map-provider').change(function () {
+    validateProviderZoom("provider");
+    //TODO: Update zoom field to max attribute for new provider
+  });
+  $('#map-zoom').change(function () {
+    validateProviderZoom("zoom");
+  });
+}
+validateProviderZoom = function (trigger) {
+  var provider = $('#map-provider').val();
+  var zoom = $('#map-zoom').val();
+  var tileLayer = getLeafletProvider(provider);
+  console.log(tileLayer.options.maxZoom);
+
+  if (zoom > tileLayer.options.maxZoom ) {
+    alert("zoom ist höher als erlaubt");
+  }
+}
