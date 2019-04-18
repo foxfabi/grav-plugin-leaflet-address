@@ -1,16 +1,17 @@
 # v1.0.3
-[Unreleased]
+(Unreleased)
 1. [](#bugfix)
     * Use issues to request features or report bugs
     * I didn't updated the version number in blueprints.yaml :/
     * Link to README.md now points to master branch
+    * Removed footnotes to comply with changelog format
 
-# [v1.0.2]
+# v1.0.2
 ## 04/15/2019
 1. [](#bugfix)
     * Wrong comparison link in the changelog
 
-# [v1.0.1]
+# v1.0.1
 ## 04/15/2019
 
 1. [](#new)
@@ -21,7 +22,7 @@
    * Missing Leaflet-providers, OpenStreetMap and map providers in credits
    * Default marker icon is red
 
-# [v0.1.3]
+# v0.1.3
 ## 04/14/2019
 
 1. [](#new)
@@ -48,8 +49,3 @@
 
 1. [](#new)
     * ChangeLog started...
-
-
-[v1.0.2]: https://github.com/foxfabi/grav-plugin-leaflet-address/compare/v1.0.1...v1.0.2
-[v1.0.1]: https://github.com/foxfabi/grav-plugin-leaflet-address/compare/v0.1.3...v1.0.1
-[v0.1.3]: https://github.com/foxfabi/grav-plugin-leaflet-address/compare/v0.1.2...v0.1.3
