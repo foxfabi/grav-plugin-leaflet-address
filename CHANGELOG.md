@@ -1,7 +1,6 @@
 # v1.0.3
 (Unreleased)
 1. [](#bugfix)
-    * Use issues to request features or report bugs
     * I didn't updated the version number in blueprints.yaml :/
     * Link to README.md now points to master branch
     * Removed footnotes to comply with changelog format
