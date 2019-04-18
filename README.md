@@ -83,7 +83,8 @@ When entering address, postcode, city and country, the coordinates search field 
 ## Usage
 
 The plugin provides two Twig template that you can include in your theme or page where you want to add the leaflet map and address. Something like:
-```
+
+```twig
 {% include "partials/leaflet-address.html.twig" with {'config': config.plugins['leaflet-address']} %}
 {% include "partials/leaflet-address-map.html.twig" with {'config': config.plugins['leaflet-address']} %}
 ```
@@ -108,5 +109,5 @@ Options:
 
 ## To Do
 
-[] Check if zoom does not exceed maxZoom of map provider
-[] [x] Translations (EN, DE)
+* [ ] Check if zoom does not exceed maxZoom of map provider
+* [x] Translations (EN, DE)
