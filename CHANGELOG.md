@@ -2,8 +2,9 @@
 (Unreleased)
 1. [](#bugfix)
     * I didn't updated the version number in blueprints.yaml :/
-    * Link to README.md now points to master branch
+    * Link to [README.md](README.md) now points to master branch
     * Removed footnotes to comply with changelog format
+    * Meets the rules of markdownlint MD022, MD006, MD032, MD040
 
 # v1.0.2
 ## 04/15/2019
