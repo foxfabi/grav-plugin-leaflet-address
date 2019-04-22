@@ -63,7 +63,7 @@ form:
       default: 13
       validate:
         min: 1
-        max: 19
+        max: 20
 
     leaflet.icon:
       type: select

@@ -119,6 +119,6 @@ validateProviderZoom = function (trigger) {
   var zoom = $('#map-zoom').val();
   var tileLayer = getLeafletProvider(provider);
   if (zoom > tileLayer.options.maxZoom) {
-    $('#map-zoom').val(zoom);
+    $('#map-zoom').val(tileLayer.options.maxZoom);
   }
 }
