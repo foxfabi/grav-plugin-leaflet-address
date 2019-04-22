@@ -109,5 +109,5 @@ Options:
 
 ## To Do
 
-* [ ] Check if zoom does not exceed maxZoom of map provider
+* [x] Check if zoom does not exceed maxZoom of map provider
 * [x] Translations (EN, DE)

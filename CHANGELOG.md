@@ -1,5 +1,8 @@
 # v1.0.3
-(Unreleased)
+## 04/22/2019
+
+1. [](#new)
+    * Limit zoom to map provider max zoom
 1. [](#bugfix)
     * I didn't updated the version number in blueprints.yaml :/
     * Link to [README.md](README.md) now points to master branch
