@@ -1,3 +1,10 @@
+# v1.0.4
+## 04/22/2019
+
+1. [](#bugfix)
+    * Grav 1.6 YAML has stricter parsing
+    * Removed commented out code
+
 # v1.0.3
 ## 04/22/2019
 
