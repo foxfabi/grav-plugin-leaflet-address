@@ -52,8 +52,6 @@ class LeafletAddressPlugin extends Plugin
     {
 
         if ($this->config->get('plugins.' . self::NAME . '.enabled')) {
-          //$language = $this->$grav['language']->
-
           // Enable the main event we are interested in
           if (!$this->isAdmin()) {
             $this->enable([
