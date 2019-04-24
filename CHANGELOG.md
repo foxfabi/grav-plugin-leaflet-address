@@ -1,3 +1,12 @@
+# v1.0.5
+## 04/24/2019
+
+1. [](#new)
+    * Added translation (IT)
+1. [](#bugfix)
+    * Seems onAdminTwigTemplatePaths does not work anymore
+    * Removed dump on plugin config page (admin)
+
 # v1.0.4
 ## 04/22/2019
 
