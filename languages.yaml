@@ -105,3 +105,57 @@ de:
             LABEL: Längengrad
         LONGITUDE:
             LABEL: Breitengrad
+
+it:
+  PLUGIN_LEAFLET_ADDRESS:
+    ADMIN:
+        ENABLED: Attivo
+        DISABLED: Disattivo
+    SECTION:
+        GLOBAL_CONFIG: Impostazioni del plugin
+        ADDRESS: Indirizzo
+        COORDINATES: Coordinate
+        CONTRIB: ">[OpenStreetMap](https://www.openstreetmap.org/) è una mappa del mondo modificabile. É fatta da persone come te.
+                  Sarebbe fantastico se decidessi di migliorare OpenStreetMap (OSM).
+                  [LearnOSM](https://learnosm.org/) fornisce istruzioni su come iniziare a contribuire."
+        FIXTHEMAP: "[Segnala un errore a OSM](https://www.openstreetmap.org/fixthemap?classes=button&target=_blank)"
+    FIELDS:
+        PLUGIN_STATUS:
+            LABEL: Stato del plugin
+        CDN:
+            LABEL: CDN
+            HELP: Includere i file JavaScript e CSS dal CDN ufficiale o locale.
+        MAP_PROVIDER:
+            LABEL: Leaflet fornitore di mappe
+            HELP: Selezionare un fornitore di mappe.
+        ZOOM_LEVEL:
+            LABEL: Livello di zoom
+        MARKER_ICON:
+            LABEL: Simbolo del segno
+            HELP: Selezionare un colore di accentuazione.
+        NAME:
+            LABEL: Nome
+        ADDRESS:
+            LABEL: Strada
+        ZIP:
+            LABEL: Codice postale
+        LOCALITY:
+            LABEL: Località (ad es. città)
+        COUNTRY:
+            LABEL: Paese
+        PHONE:
+            LABEL: Numero di telefono
+        EMAIL:
+            LABEL: Indirizzo e-mail
+        ADDITIONAL:
+            LABEL: Ulteriori informazioni
+        PROVINCE:
+            LABEL: Stato o provincia
+        SEARCH:
+            LABEL: Ricerca
+        COORDINATES:
+            LABEL: Coordinate
+        LATITUDE:
+            LABEL: Longitudine
+        LONGITUDE:
+            LABEL: Latitudine
