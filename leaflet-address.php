@@ -53,19 +53,11 @@ class LeafletAddressPlugin extends Plugin
 
         if ($this->config->get('plugins.' . self::NAME . '.enabled')) {
           // Enable the main event we are interested in
-          if (!$this->isAdmin()) {
-            $this->enable([
-                'onTwigTemplatePaths' => ['onTwigTemplatePaths', 0],
-            ]);
-          } else {
-            $this->enable([
-                'onAdminTwigTemplatePaths' => ['onAdminTwigTemplatePaths', 0],
-            ]);
-          }
           $this->enable([
               'onPageInitialized'   => ['onPageInitialized', 0],
               'onAssetsInitialized' => ['onAssetsInitialized', 0],
               'onShortcodeHandlers' => ['onShortcodeHandlers', 0],
+              'onTwigTemplatePaths' => ['onTwigTemplatePaths', 0],
           ]);
         }
     }
@@ -76,14 +68,6 @@ class LeafletAddressPlugin extends Plugin
     public function onTwigTemplatePaths()
     {
         $this->grav['twig']->twig_paths[] = __DIR__ . '/templates';
-    }
-
-    /**
-     * Add current directory to twig lookup paths.
-     */
-    public function onAdminTwigTemplatePaths($event)
-    {
-        $event['paths'] = [__DIR__ . '/admin/templates'];
     }
 
     /**

@@ -1,10 +1,10 @@
 {% extends "forms/field.html.twig" %}
+
 {% set value = (value is null ? "" : value) %}
 {% set config = config.plugins['leaflet-address'] %}
 
 {% block field %}
 
-{{dump(config)}}
 <div class="form-columns grid">
   <div class="form-columns size-1-2">
     <div class="form-field grid">
