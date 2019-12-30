@@ -11,7 +11,7 @@ address:
   subaddress:
 leaflet:
   zoom: 13
-  icon: Yellow
+  icon: Red
   coordinates: 
 cdn: true
 provider: OpenStreetMap.Mapnik

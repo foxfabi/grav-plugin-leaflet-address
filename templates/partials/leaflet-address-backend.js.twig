@@ -1,0 +1,43 @@
+<script>
+  centerMapOnMarker = function (map, marker) {
+    try {
+      var latLngs = [marker.getLatLng()];
+      var markerBounds = L.latLngBounds(latLngs);
+      map.fitBounds(markerBounds);
+      map.setZoom(Number('{{config.leaflet.zoom}}'));
+    } catch (error) {
+      //console.log(error);
+    }
+  };
+
+  window.addEventListener("load", function () {
+    var marker = undefined;
+    $('#coordinateselector-searching').hide();
+    bindSearchButton();
+    var mapheight = $('#coordinateselector-map').width();
+    $('#coordinateselector-map').css('height', 9 * mapheight / 16);
+    var addressmap = L.map('coordinateselector-map').setView([46.980252,
+      8.041992
+    ], Number('{{ config.leaflet.zoom }}'));
+    addressmap.on('click', fetchCoordinate, {
+      item: self
+    });
+    var maplayer = getLeafletProvider('{{config.provider}}');
+    maplayer.addTo(addressmap);
+    // Add a marker with the stored coordinates
+    if ($("#coordinateselector-value").val() !== undefined) {
+      marker = valueToMarker(addressmap, '{{ config.path }}',
+        '{{ config.leaflet.icon }}');
+    }
+    $('#coordinateselector-value').change(function () {
+      if (marker !== undefined) {
+        addressmap.removeLayer(marker);
+      }
+      marker = valueToMarker(addressmap, '{{ config.path }}',
+        '{{ config.leaflet.icon }}');
+    });
+    bindPrepareSearch();
+    addressmap.invalidateSize();
+    prepareSearch();
+  });
+</script>

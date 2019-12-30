@@ -1,12 +1,19 @@
-window.addEventListener("load", function() {
-  var mapheight = $('#leaflet-address-map').width();
-  $('#leaflet-address-map').css('height', mapheight);
-  var coordinates = '{{config.leaflet.coordinates}}';
-  var coord = coordinates.split(',');
-  var addressmap = L.map('leaflet-address-map').setView([coord[0], coord[1]], {{config.leaflet.zoom}});
-  var maplayer = getLeafletProvider('{{config.provider}}');
-  maplayer.addTo(addressmap);
-  var markerIcon = getMarkerIcon('{{config.path}}', '{{config.leaflet.icon}}');
-  var marker = L.marker([coord[0], coord[1]], { icon: markerIcon }).addTo(addressmap);
-  addressmap.invalidateSize();
-});
+<script>
+  window.addEventListener("DOMContentLoaded", function () {
+    let container = document.getElementById('leaflet-address-map')
+    let mapheight = container.offsetWidth + 'px';
+    container.style.height = mapheight;
+    var coordinates = '{{config.leaflet.coordinates}}';
+    var coord = coordinates.split(',');
+    var addressmap = L.map('leaflet-address-map').setView([coord[0], coord[
+      1]], Number('{{config.leaflet.zoom}}'));
+    var maplayer = getLeafletProvider('{{config.provider}}');
+    maplayer.addTo(addressmap);
+    var markerIcon = getMarkerIcon('{{config.path}}',
+      '{{config.leaflet.icon}}');
+    var marker = L.marker([coord[0], coord[1]], {
+      icon: markerIcon
+    }).addTo(addressmap);
+    addressmap.invalidateSize();
+  });
+</script>
