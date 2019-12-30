@@ -35,6 +35,14 @@
   padding: .375rem .375rem;
 }
 
+.fixthemap p {
+  margin: 0 auto;
+}
+
+.text-right {
+  text-align: right;
+}
+
 @keyframes spinner {
   to {transform: rotate(360deg);}
 }

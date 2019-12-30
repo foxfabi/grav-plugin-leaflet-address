@@ -1,4 +1,5 @@
 <?php
+
 namespace Grav\Plugin\Shortcodes;
 
 use Thunder\Shortcode\Shortcode\ShortcodeInterface;
@@ -13,7 +14,6 @@ class LeafletAddressShortcode extends Shortcode
      * It will process following shortcodes:
      *   [place type="addr"]: display leaflet address (leaflet-address.html.twig)
      *   [place type="map"]:  display leaflet address map (leaflet-address-map.html.twig)
-     *  
      *  @return string
      */
     public function init()
@@ -41,6 +41,5 @@ class LeafletAddressShortcode extends Shortcode
             }
             return null;
         });
-
     }
 }
