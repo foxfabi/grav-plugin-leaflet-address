@@ -76,7 +76,7 @@ Do you see something on the map that needs editing? Log into OpenStreetMap to [f
 
 If you use the admin plugin, a file named `leaflet-address.yaml` with your configuration will be saved in the `user/config/plugins/` folder once the configuration is saved.
 
-When entering address, postcode, city and country, the coordinates search field will be completed accordingly. The search for coordinates uses the [photon.komoot.de](https://photon.komoot.de/) API and returns the first six matching entries. When selecting a result, the associated coordinates (longitude, latitude) are entered in the corresponding fields. You can also click on the map to change the marker position and get the `latitude,longitude` of the selected location.
+When entering address, postcode, city and country, the coordinates search field will be completed accordingly. The search for coordinates uses the [photon.komoot.io](https://photon.komoot.io/) API and returns the first six matching entries. When selecting a result, the associated coordinates (longitude, latitude) are entered in the corresponding fields. You can also click on the map to change the marker position and get the `latitude,longitude` of the selected location.
 
 ![Leaflet address configuration UI](assets/screenshots/plugin-config-ui.png)
 

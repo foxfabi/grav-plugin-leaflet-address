@@ -2,7 +2,7 @@ getPhotonLocations = function (value) {
   $("#coordinateselector-datalist").html("");
   return new Promise(function(resolve, reject) {
     var items = [];
-    var url = "//photon.komoot.de/api/?q=" + value + "&lang=en&limit=6"; // &osm_tag=place
+    var url = "//photon.komoot.io/api/?q=" + value + "&lang=en&limit=6"; // &osm_tag=place
     $.getJSON( url )
     .done(function( data ) {
       $.each( data, function( key, val ) {
@@ -103,7 +103,7 @@ bindSearchButton = function() {
         $("#coordinateselector-datalist").show();
       });
     }
-    return false; 
+    return false;
   });
 }
 bindValidateProviderZoom = function () {
